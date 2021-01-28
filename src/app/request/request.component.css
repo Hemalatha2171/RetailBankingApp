@@ -1,0 +1,13 @@
+#header{
+  background-image: linear-gradient(to right, #e09406ba , #4e4d4af0);
+    font-weight: 700;
+}
+.btn-primary{
+    color: #0e0d0d;
+    background-color:#e09406ba ;
+    border: #0e0d0d;
+    -moz-user-select: black;
+    text-align: center;
+    align-self: center;
+    border-radius: 5%;
+  }

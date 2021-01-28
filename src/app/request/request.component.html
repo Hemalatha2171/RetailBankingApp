@@ -1,0 +1,26 @@
+<p>request works!</p>
+<table class="table table-bordered" id="header">
+    <thead>
+        <tr>
+            <td>NAME</td>  
+            <td>ADDRESS</td>  
+            <td>CONTACT NUMBER</td>  
+            <td>EMAIL ADDRESS</td>  
+            <!-- <td>PASSWORD</td>   -->
+            <td>APPROVAL STATUS</td>  
+</tr>
+</thead>
+<tbody>
+    <tr id="tbl"*ngFor="let customer of  pass">
+        
+        
+        <td>{{customer.name}} </td>
+        <td>{{customer.ads}} </td>
+        <td>{{customer.cntno}} </td>
+        <td>{{customer.usrname}} </td>
+        <!-- <td >{{customer.pwd}} </td> -->
+        <td><button class="btn-primary" (click)="approve()">Approval</button></td>
+        
+    </tr>
+</tbody>
+</table>

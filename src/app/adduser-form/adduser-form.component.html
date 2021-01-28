@@ -1,0 +1,147 @@
+<div class="header">
+    <h2>NEW USER FORM </h2> 
+    <br>
+</div>
+
+<h3>Apply Details for New User: </h3>
+<div>
+    <div class="card card-body">
+      <div>
+      <form #resp="ngForm" (ngSubmit)="onSubmit(resp)">
+           <div class="form-row">
+              <div class="form-group col">
+                <label>UserName:</label>
+                <input type="text" class="form-control" id="username"name="username" [(ngModel)]="Udetail.uname" pattern="[A-Za-z]{1,13}" 
+                required #uname="ngModel" placeholder="Fill User Name"> 
+           
+                <div *ngIf="uname.touched" class="alert-danger">
+                    <div *ngIf="uname.errors?.required">
+                        Username is required
+                    </div>
+                    <div *ngIf="uname.errors?.pattern">
+                        Username is invalid
+                    </div>
+
+                </div>
+         
+            </div>
+  
+           <div class="form-group col-5">
+                    
+                  <label>UserId:</label>
+                  <input type="number" class="form-control" id="userid" name="userid"[(ngModel)]="Udetail.uid"
+                  required  #uid="ngModel" placeholder="Fill User Id">
+                  <div *ngIf="uid.touched" class="alert-danger">
+                    <div *ngIf="uid.errors?.required">
+                        UserID is required
+                    </div>
+
+                </div>
+           
+              </div> <br> <br>
+              </div>
+          
+  
+      <!-- AccountNumber -->
+              <div class="form-group">
+          <label>Account Number : </label>
+                <input type="text" class="form-control" id="accno" name="accno" [(ngModel)]="Udetail.uacc"
+                required pattern="[0-9]{9,12}" #uacc="ngModel" placeholder="Fill User Account Number"> 
+                <div *ngIf="uacc.touched" class="alert-danger">
+                    <div *ngIf="uacc.errors?.required">
+                        User Account Number is required
+                    </div>
+                    <div *ngIf="uacc.errors?.pattern">
+                        User Account Number is invalid *AccNo should have 9-12 digits
+                    </div>
+                </div>
+         
+              </div>
+  
+      <!-- IFSC CODE -->
+          <div class="form-group col-5">
+                <label>IFSC code:</label>
+              <input type="text" class="form-control" id="ifsc" name="ifsc" [(ngModel)]="Udetail.uifsc"
+              required pattern="[A-Z|a-z]{4}[0][\d]{6}$"  #uifsc="ngModel" placeholder="Fill User IFSC Code"> 
+              <div *ngIf="uifsc.touched" class="alert-danger">
+                <div *ngIf="uifsc.errors?.required">
+                    User IFSC Code is required
+                </div>
+                <div *ngIf="uifsc.errors?.pattern">
+                    User IFSC Code is invalid<small>
+                        IFSC Code  contains 11 characters.In that first 4 characters are alphabets,5th character is 0 and next 6 characters are numerics</small>
+                </div>
+
+            </div>
+              
+              </div>
+              <br>
+              <div class="form-group">
+                   <label>phone Number : +91()</label>
+                      <input type="text "class="form-control"  id="ph" name="ph" [(ngModel)]="Udetail.uph"
+                      required  #uph="ngModel" maxlength="10" placeholder="Fill User Contact Number"> 
+                      <div *ngIf="uph.touched" class="alert-danger">
+                        <div *ngIf="uph.errors?.required">
+                            User Phone Mobile is required
+                        </div>
+                    </div>
+                      </div>
+  
+  <br>
+          <div>
+              <div class="form-row">
+                <div class="form-group col">
+                   <label>Account type  : </label>
+                        <select class="btn btn-secondary dropdown-toggle"id="acctype" name="acctype" [(ngModel)]="Udetail.uacctyp"
+                        required #uacctyp="ngModel" >
+                          <option>Current Account</option>
+                          <option>Saving Account</option>
+                          <option>Salary Account</option>
+                          <option>NIR Account</option>
+                        </select>
+
+                        <div *ngIf="uacctyp.touched" class="alert-danger">
+                            <div *ngIf="uacctyp.errors?.required">
+                                User Account Type is required
+                            </div>
+            
+                        </div>
+                </div>
+                       
+  
+              <div class="form-group col-5">
+                  <label>Branch  :</label>
+                      <select class="btn btn-secondary dropdown-toggle"  id="branch" name="branch" [(ngModel)]="Udetail.ubh"
+                      required  #ubh="ngModel">
+                        <option class="dropdown-item">V.V Nagar-Madurai</option>
+                        <option class="dropdown-item">Kalavakkam-Madurai</option>
+                        <option class="dropdown-item">Anna Nagar-Chennai</option>
+                       <option class="dropdown-item">porur-Chennai</option>
+                        <option class="dropdown-item">T.Nagar-Chennai</option>
+                        <option class="dropdown-item">Allapakkam-Chennai</option>
+                        <option class="dropdown-item">Kundrathur-Selam</option>
+               </select> 
+               <div *ngIf="ubh.touched" class="alert-danger">
+                <div *ngIf="ubh.errors?.required">
+                    User Branch is required
+                </div>
+
+            </div>
+
+             </div>
+             </div>
+         
+  <br>
+              
+          </div>
+  
+          <div class="text-center">
+            <button  [disabled]="resp.invalid"  class="btn btn-primary">submit</button>
+            </div>
+            
+    </form>
+      </div>
+   
+    </div>
+  </div>
+  <br>

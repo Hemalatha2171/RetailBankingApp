@@ -1,0 +1,39 @@
+.header{
+    text-align: center;
+    color: #111110 ;
+    background-image: linear-gradient(to right, #e09406ba , #4e4d4af0);
+    height: 90px;
+  }
+  
+  .btn-primary{
+    color: #0e0d0d;
+    background-color:#e09406ba ;
+    border: #0e0d0d;
+    -moz-user-select: black;
+    text-align: center;
+    align-self: center;
+    border-radius: 5%;
+  }
+  button{
+    align-content: center;
+  }
+  .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    border: groove;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    
+    background-clip: border-box;
+    border: 8px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    font-size: initial;
+    font-weight: 600;
+    font-style: italic;
+    font-variant-caps: titling-caps;
+    background-image: linear-gradient(to right, #e09406ba , #4e4d4af0);
+}

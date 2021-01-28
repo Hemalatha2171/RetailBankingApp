@@ -1,0 +1,74 @@
+<br>
+<div class="container">
+<form #resp="ngForm" (ngSubmit)="onSubmit(resp)">
+ 
+        <div class="form-group col-5">
+            <label>Name : </label>
+                  <input type="text" class="form-control" id="accname" name="accname" [(ngModel)]="Rdetail.name"
+                  required pattern="[A-Za-z]{1,13}"  #name="ngModel" placeholder="Enter your Name">  
+                  <div *ngIf="name.touched" class="alert-danger">
+                      <div *ngIf="name.errors?.required">
+                          Name field is required
+                      </div>
+                      <div *ngIf="name.errors?.pattern">
+                          Name is invalid
+                      </div>
+                  </div>
+                  </div>
+         <div class="form-group col-5">
+             <label>Address :  </label>
+                 <input type="textarea" class="form-control" id="accadd" name="accadd" [(ngModel)]="Rdetail.ads"
+                          required   #ads="ngModel" placeholder="Enter your Address"> 
+                          <div *ngIf="ads.touched" class="alert-danger">
+                              <div *ngIf="ads.errors?.required">
+                                  Address field is required
+                              </div>
+                          </div>
+             </div>
+
+             <div class="form-group col-5">
+                <label>Contact Number : </label>
+                      <input type="text" class="form-control" id="accCnt" name="accCnt" [(ngModel)]="Rdetail.cntno"
+                      required maxlength="10" #cntno="ngModel" placeholder="Enter Contact Number "> 
+                      <div *ngIf="cntno.touched" class="alert-danger">
+                          <div *ngIf="cntno.errors?.required">
+                              Contact Number field is required
+                          </div>
+                      </div>
+                      </div>
+
+             
+         <div class="form-group col-5">
+         <label>Email(UserName) : </label>
+                <input type="text" class="form-control" id="usrname" name="usrname" [(ngModel)]="Rdetail.usrname"
+                    placeholder="Enter Vaild Mail ID" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"  #usrname="ngModel"> 
+                    <div *ngIf="usrname.touched" class="alert-danger">
+                    <div *ngIf="usrname.errors?.required">
+                         Email field is required
+                    </div>
+                     <div *ngIf="usrname.errors?.pattern">
+                          Email is invalid
+                    </div>
+                  </div>
+                 </div>
+                 <div class="form-group col-5">
+                    <label>Password : </label>
+                           <input type="password" class="form-control" id="pwd" name="pwd" [(ngModel)]="Rdetail.pwd"
+                               placeholder="Set Strong Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" #pwd="ngModel"> 
+                               <div *ngIf="pwd.touched" class="alert-danger">
+                               <div *ngIf="pwd.errors?.required">
+                                    Password field is required
+                               </div>
+                                <div *ngIf="pwd.errors?.pattern">
+                                     password is invalid
+                               </div>
+                             </div>
+                            </div>
+                            
+
+            <div>
+            <button type="submit" [disabled]="resp.invalid" class="btn btn-primary"> Submit for Approval</button></div>
+           
+
+        </form>
+    </div>

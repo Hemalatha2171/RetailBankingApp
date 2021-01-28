@@ -1,0 +1,30 @@
+<p></p>
+<div class="jumbotron">
+<form #resp="ngForm" (ngSubmit)="onSubmit(resp)">
+<h2 >User Current  Balance is: {{User.bal}}</h2>
+
+    <div class="form-group col-5">
+        <label>Receiver Account Number :</label>
+              <input type="text" class="form-control" id="uacct" name="uacc" [(ngModel)]="detail.uacc"
+              required   #uacc="ngModel" placeholder="Enter Account Number">  
+              <div *ngIf="uacc.touched" class="alert-danger">
+                  <div *ngIf="uacc.errors?.required">
+                      Description field is required
+                  </div>
+              </div>
+              </div>
+              <div class="form-group col-5">
+                <label>Amount :</label>
+                      <input type="text" class="form-control" id="accbal" name="sbal" [(ngModel)]="detail.sbal"
+                      required  #sbal="ngModel" placeholder="Enter Amount" maxlength="6">  
+                      <div *ngIf="sbal.touched" class="alert-danger">
+                          <div *ngIf="sbal.errors?.required">
+                              Amount field is required
+                          </div>
+                      </div>
+                      </div>
+                      <div class="text-center">
+                      <button class="btn btn-primary" [disabled]="resp.invalid" > Transfer</button>
+                    </div>
+</form>
+</div>

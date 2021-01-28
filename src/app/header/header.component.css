@@ -1,0 +1,55 @@
+
+.bg{
+  background-image: url("https://onecommercehub.worldline.com/wp-content/uploads/2020/07/iStock-928613118-scaled_cropped-0.jpg");
+
+  /* Control the height of the image */
+  min-height: 700px;
+ width: 100%;
+  /* Center and scale the image nicely */
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 500px;
+  border: 3px solid #ef8604;;
+    background-color: black;
+    opacity: 0.6;
+    color: #ef8604;
+    font-weight: 700;
+    
+}
+.header{
+  text-align: center;
+  color: #111110 ;
+  background-image: linear-gradient(to right, #e09406ba , #4e4d4af0);
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+  background-color: #ef8604 ;
+  ;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #f5f9fd;
+  background-color: #181515;
+  background-clip: padding-box;
+  border: 1px solid #f07a0c;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

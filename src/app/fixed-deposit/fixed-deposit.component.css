@@ -1,0 +1,14 @@
+.jumbotron{
+    height: 100%;
+    width: 100%;
+  background-image: linear-gradient(to right, #e09406ba , #4e4d4af0);
+  font-weight: 800;
+
+}
+.btn-primary:disabled {
+    color: #0c0c0c;
+    background-color: #b4cccc33;
+    border-color: #141614;
+    font-weight: 700;
+    width: 40%;
+}
